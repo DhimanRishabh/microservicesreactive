@@ -1,13 +1,13 @@
-package com.demo.test;
+package com.localServer.microServiceLevel1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestApplication {
+public class Micoservicelevel1 {
 
     public static void main(String[] args) {
-        SpringApplication.run(TestApplication.class, args);
+        SpringApplication.run ( Micoservicelevel1.class , args );
     }
 
 }

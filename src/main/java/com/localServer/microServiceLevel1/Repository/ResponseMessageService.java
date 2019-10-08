@@ -1,7 +1,6 @@
-package com.demo.test.Repository;
+package com.localServer.microServiceLevel1.Repository;
 
-import com.demo.test.models.ResponseMessage;
-import org.springframework.boot.origin.SystemEnvironmentOrigin;
+import com.localServer.microServiceLevel1.models.ResponseMessage;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class ResponseMessageService implements ResponseMessageContract {
         return  responseMessageList.stream()
                 .filter(responseMessage -> responseMessage.getMid().equalsIgnoreCase(mid))
                 .findFirst()
-                .orElseGet(() -> new ResponseMessage(mid, "Not Message found with given ID"));
+                .orElseThrow ( );
     }
 
     @Override
