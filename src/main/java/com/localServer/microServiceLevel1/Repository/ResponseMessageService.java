@@ -23,7 +23,7 @@ public class ResponseMessageService implements ResponseMessageContract {
         return  responseMessageList.stream()
                 .filter(responseMessage -> responseMessage.getMid().equalsIgnoreCase(mid))
                 .findFirst()
-                .orElseThrow ( );
+                 .orElse ( new  ResponseMessage("Sending default",UUID.randomUUID().toString()) );
     }
 
     @Override
